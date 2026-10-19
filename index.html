@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Dashboard</title>
+    <link rel="stylesheet" href="studentDashboard.css">
+    <script src="studentDashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <p class="cap-logo">&#127891;</p>
+            <div class="heading-para-text">
+                <p class="title">Student Performance Dashboard</p>
+                <p class="sub-title">Track · Analyze · Improve</p>
+            </div>
+        </div>
+        <button type="button" class="newStudentBtn" id="newStudentBtn">+ Add New Student</button>
+    </header>
+
+    <main>
+        <section class="kpi-cards">
+            <div class="kpi-card card1">
+                <span class="card1-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2864D7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                <div class="card-text">
+                    <p class="static-text">Total Students</p>
+                    <p class="stats" id="totalStudents">0</p>
+                </div>
+            </div>
+
+            <div class="kpi-card card2">
+                <span class="card2-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 3 5-7"/><path d="M16 6h4v4"/></svg></span>
+                <div class="card-text">
+                    <p class="static-text">Class Average</p>
+                    <p class="stats" id="classAvg">0</p>
+                </div>
+            </div>
+
+            <div class="kpi-card card3">
+                <span class="card3-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg></span>
+                <div class="card-text">
+                    <p class="static-text">Passed Students</p>
+                    <p class="stats" id="passedStudents">0</p>
+                </div>
+            </div>
+
+            <div class="kpi-card card4">
+                <span class="card4-bg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg></span>
+                <div class="card-text">
+                    <p class="static-text">Failed Students</p>
+                    <p class="stats" id="failedStudents">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-filters">
+            <label class="searchLogo" for="searchStudentName">&#128269;</label>
+            <input id="searchStudentName" type="search" placeholder="Search student by name...">
+            <button type="button" class="filterBtns activeFilterBtn" id="allStudents">All</button>
+            <button type="button" class="filterBtns" id="above80">80 &amp; Above</button>
+            <button type="button" class="filterBtns" id="passed">Passed</button>
+            <button type="button" class="filterBtns" id="failed">Failed</button>
+            <p>Showing <span id="showingStudentsUpdate">0</span> of <span id="totalStudentsUpdate">0</span> students</p>
+        </section>
+
+        <section class="studentsCardsParent" id="studentsCardsParent">
+            <p class="emptyStudentsMessage" id="emptyStudentsMessage" hidden>No students found. Try changing your search or filter.</p>
+        </section>
+
+        <section class="statsParent">
+            <section class="stat-cards stat-card1">
+                <div class="topper-title-parent">
+                    <span>🏆</span>
+                    <h3>Class Topper</h3>
+                </div>
+                <div class="toppper-name-parent" id="topperDetails">
+                    <p id="topperInitial">?</p>
+                    <div class="name-average-parent">
+                        <p id="topperName">No students yet</p>
+                        <div class="topper-average">
+                            <p>Average</p>
+                            <p class="avgMark" id="avgMark">--</p>
+                            <p class="grade" id="grade">--</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        <section class="stat-cards stat-card2">
+            <div class="topper-title-parent">
+                <span>📊</span>
+                <h3>Students with Average Above Class Average</h3>
+            </div>
+
+            <div class="above-average-table-scroll">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aboveAverageStudents"></tbody>
+                </table>
+            </div>
+        </section>
+
+
+            
+        <section class="stat-cards stat-card3">
+            <div class="topper-title-parent">
+                <span>🔤</span>
+                <h3>Students in Alphabetical Order</h3>
+            </div>
+
+            <div class="alphabetical-table-scroll">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alphabeticalStudents"></tbody>
+                </table>
+            </div>
+        </section>
+
+        </section>
+    </main>
+
+    <div class="formOverlay" id="formOverlay" hidden>
+        <section class="studentFormParent">
+            <div class="formHeader">
+                <div>
+                    <h2 id="formTitle">Add New Student</h2>
+                    <p>Enter student details and subject marks.</p>
+                </div>
+                <button type="button" class="closeFormBtn" id="closeFormBtn">X</button>
+            </div>
+
+            <form id="studentForm">
+                <input type="hidden" id="editingStudentId" value="">
+                <label for="studentNameInput">Student Name</label>
+                <input type="text" id="studentNameInput" maxlength="60" placeholder="Enter student name" required>
+                <p class="marks-label">Subject Marks</p>
+                <div class="marks-inputs">
+                    <div>
+                        <label for="mark1">Subject 1</label>
+                        <input type="number" id="mark1" min="0" max="100" required>
+                    </div>
+
+                    <div>
+                        <label for="mark2">Subject 2</label>
+                        <input type="number" id="mark2" min="0" max="100" required>
+                    </div>
+
+                    <div>
+                        <label for="mark3">Subject 3</label>
+                        <input type="number" id="mark3" min="0" max="100" required>
+                    </div>
+
+                    <div>
+                        <label for="mark4">Subject 4</label>
+                        <input type="number" id="mark4" min="0" max="100" required>
+                    </div>
+
+                    <div>
+                        <label for="mark5">Subject 5</label>
+                        <input type="number" id="mark5" min="0" max="100" required>
+                    </div>
+                </div>
+                <p class="formError" id="formError"></p>
+                <div class="formButtons">
+                    <button type="button" class="cancelFormBtn" id="cancelFormBtn">Cancel</button>
+                    <button type="submit" class="saveStudentBtn" id="saveStudentBtn">Add Student</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

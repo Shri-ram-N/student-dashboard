@@ -1,0 +1,1081 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --primary-color: #293b5c;
+    --border:#d2e2ff;
+    --button-clr:#3e65e1;
+    --secondary-color:#f5f9ff;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 10px;
+    background: var(--primary-color);
+}
+
+header div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+}
+
+.heading-para-text{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: self-start;
+    flex-direction: column;
+    width: 85%;
+    height: 65px;
+    color: white;
+}
+
+.cap-logo{
+    font-size: 3em;
+}
+
+.title{
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.sub-title{
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #cfdaff;
+}
+
+.newStudentBtn{
+    border: none;
+    padding: 15px 19px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    color: white;
+    background: var(--button-clr);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.newStudentBtn:hover{
+    box-shadow: 2px 2px 15px rgba(255,255,255,0.2);
+}
+
+.kpi-cards{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kpi-card{
+    background-color: #fdfefe;
+    height: 80%;
+    width: 24%;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.kpi-card span{
+    padding: 14px;
+    border-radius: 13px;
+    display: flex;
+}
+
+.card1-bg{
+    background: #e8f1fe;
+}
+
+.card2-bg{
+    background: #e4d4ff;
+}
+
+.card3-bg{
+    background: #d1f2dd;
+}
+
+.card4-bg{
+    background: #fec8c8;
+}
+
+.card-text{
+    display: flex;
+    width: 65%;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 64%;
+}
+
+.static-text{
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.stats{
+    font-size: 1.7em;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.search-filters{
+    display: flex;
+    padding: 0 10px 10px;
+    gap: 20px;
+    position: relative;
+}
+
+.searchLogo{
+    position: absolute;
+    top: 10px;
+    left: 19px;
+}
+
+#searchStudentName{
+    border: 1px solid var(--border);
+    height: 40px;
+    width: 34%;
+    outline: none;
+    padding-left: 35px;
+    border-radius: 10px;
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+.search-filters button{
+    border: 1px solid var(--border);
+    width: 7%;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-filters p{
+    color: var(--primary-color);
+    margin: 1.4% 0 0 21%;
+    font-size: 0.8em;
+}
+
+.activeFilterBtn{
+    color: white !important;
+    background: var(--button-clr) !important;
+}
+
+.statsParent {
+    min-height: 250px;
+    height: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.statsParent .stat-cards{
+    flex-grow: 1;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background-color: white;
+    padding: 10px;
+}
+
+.topper-title-parent{
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    height: auto;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.topper-title-parent span{
+    margin-left: 10px;
+    font-size: 1.4em;
+}
+
+.topper-title-parent h3{
+    color: var(--primary-color);
+    font-size: 1em;
+}
+
+.toppper-name-parent{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    height: 160px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    margin-top: 12px;
+}
+
+.toppper-name-parent>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--button-clr);
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.name-average-parent{
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.name-average-parent>p{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.topper-average{
+    position: relative;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    margin: 9px 0 0 0;
+}
+
+.topper-average p{
+    margin: 0;
+}
+
+.topper-average .avgMark{
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.topper-average .grade{
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e0eefc;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--button-clr);
+}
+
+.statsParent .stats-table{
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--primary-color);
+    font-size: 0.85em;
+}
+
+.statsParent .stats-table th,
+.statsParent .stats-table td{
+    padding: 9px 5px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.statsParent .stats-table th{
+    background: var(--secondary-color);
+}
+
+.statsParent .stats-table td:nth-child(2){
+    text-align: left;
+}
+
+.statsParent .stats-table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.statsParent .stats-table .grade{
+    display: inline-block;
+    min-width: 30px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.statsParent .stats-table .grade-a,
+.statsParent .stats-table .grade-b{
+    color: #0866d9;
+    background: #dcecff;
+}
+
+.statsParent .stats-table .grade-d{
+    color: #7c3aed;
+    background: #ede9fe;
+}
+
+.statsParent .stats-table .grade-c{
+    color: #b45309;
+    background: #fff0d9;
+}
+
+.statsParent .stats-table .grade-f{
+    color: #dc2626;
+    background: #ffe0e3;
+}
+
+.stat-card3 .stats-table{
+    font-size: 0.75em;
+}
+
+.stat-card3 .stats-table th,
+.stat-card3 .stats-table td{
+    padding: 5px 4px;
+    line-height: 1.1;
+}
+
+.stat-card3 .stats-table .grade{
+    min-width: 24px;
+    padding: 2px 5px;
+    font-size: 0.9em;
+}
+
+.studentsCardsParent{
+    display: flex;
+    gap: 13px;
+    padding: 5px 10px;
+    height: 43vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.stat-card3{
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.alphabetical-table-scroll{
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.alphabetical-table-scroll .stats-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.cardParent{
+    background-color: white;
+    flex: 0 0 19.28%;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    color: var(--primary-color);
+}
+
+.cardParent h3{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.cardHeader{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.studentInitial{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--button-clr);
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em !important;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.cardHeader .studentName{
+    flex-grow: 1;
+    font-size: 1.1em;
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+.studentGrade{
+    background: #e0eefc;
+    color: var(--button-clr);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.75em;
+}
+
+.cardParent .studentAverage{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 13px 0 15px 0;
+}
+
+.cardParent .studentMarks{
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-size: 0.8em;
+}
+
+.studentMarks th,
+.studentMarks td{
+    padding: 8px 2px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.studentMarks th{
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.studentMarks td{
+    color: var(--primary-color);
+}
+
+.studentStatus{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+.passed{
+    background-color: #d9f7e8;
+    color: #18794e;
+}
+
+.failed{
+    background-color: #ffe0e0;
+    color: #c62828;
+}
+
+.studentButtons{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.studentButtons button{
+    padding: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.editButton{
+    background-color: transparent;
+}
+
+.deleteButton{
+    background-color: transparent;
+    color: #c62828;
+}
+
+.studentButtons button:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+
+.marksSummary{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 19px;
+}
+
+.emptyStudentsMessage{
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--primary-color);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.stat-card2{
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.above-average-table-scroll{
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.above-average-table-scroll thead{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.emptyStudentsMessage[hidden]{
+    display: none;
+}
+
+.marksSummary div{
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+    background: var(--secondary-color);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.marksSummary p{
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.studentStatus{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+.passed{
+    background-color: #d9f7e8;
+    color: #18794e;
+}
+
+.failed{
+    background-color: #ffe0e0;
+    color: #c62828;
+}
+
+.studentButtons{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.studentButtons button{
+    padding: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.editButton{
+    background-color: transparent;
+}
+
+.deleteButton{
+    background-color: transparent;
+    color: #c62828;
+}
+
+.studentButtons button:hover{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+
+.emptyStudentsMessage{
+    text-align: center;
+    padding: 20px;
+    color: var(--primary-color);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.emptyStudentsMessage[hidden],
+.formOverlay[hidden] {
+    display: none;
+}
+
+.formOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.studentFormParent{
+    background: white;
+    width: 500px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.formHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formHeader h2,
+.formHeader p{
+    color: var(--primary-color);
+}
+
+.formHeader p{
+    margin-top: 5px;
+}
+
+.closeFormBtn{
+    border: none;
+    background: transparent;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+#studentForm>label{
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#studentNameInput{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.marks-label{
+    margin: 20px 0 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.marks-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.marks-inputs label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.marks-inputs input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+#studentNameInput:focus,.marks-inputs input:focus{
+    border-color: var(--button-clr);
+}
+
+.formError{
+    color: #dc2626;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.formButtons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancelFormBtn,
+.saveStudentBtn{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancelFormBtn{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.saveStudentBtn{
+    background: var(--button-clr);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
+        min-width: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    header > div {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .cap-logo {
+        font-size: 1.8em;
+        flex-shrink: 0;
+    }
+
+    .heading-para-text {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        height: auto;
+    }
+
+    .title {
+        font-size: 1em;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .sub-title {
+        font-size: 0.75em;
+        letter-spacing: 0;
+        margin-top: 10px;
+    }
+
+    .newStudentBtn {
+        width: auto;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 10px;
+        font-size: 0.75em;
+        white-space: normal;
+    }
+
+    .kpi-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        height: auto;
+        padding: 12px;
+    }
+
+    .kpi-card {
+        width: 100%;
+        min-width: 0;
+        height: 85px;
+        padding: 10px;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .kpi-card span {
+        padding: 8px;
+        flex-shrink: 0;
+    }
+
+    .kpi-card span svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-text {
+        width: auto;
+        min-width: 0;
+        height: auto;
+        gap: 5px;
+    }
+
+    .static-text {
+        font-size: 0.8em;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .stats {
+        font-size: 1.4em;
+    }
+
+    .search-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 12px 12px;
+    }
+
+    #searchStudentName {
+        width: 100%;
+        flex: 0 0 100%;
+        min-width: 0;
+        height: 42px;
+        padding-left: 36px;
+    }
+
+    .searchLogo {
+        top: 18px;
+        left: 23px;
+    }
+
+    .search-filters button {
+        width: auto;
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 8px 3px;
+        font-size: 0.78em;
+        white-space: normal;
+    }
+
+    .search-filters p {
+        width: 100%;
+        margin: 2px 0 0;
+        text-align: right;
+    }
+
+    .studentsCardsParent {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 8px 12px 16px;
+        overflow: visible;
+    }
+
+    .cardParent {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        flex: none;
+        padding: 14px;
+    }
+
+    .cardHeader {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .studentInitial {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .cardHeader .studentName {
+        flex: 1;
+        min-width: 0;
+        font-size: 1em;
+        overflow-wrap: anywhere;
+    }
+
+    .studentGrade {
+        flex-shrink: 0;
+        padding: 5px 7px;
+        font-size: 0.7em;
+    }
+
+    .cardParent .studentAverage {
+        margin: 14px 0;
+        font-size: 1.25em;
+    }
+
+    .cardParent .studentMarks {
+        width: 100%;
+        table-layout: fixed;
+        margin-top: 10px;
+        font-size: 0.8em;
+    }
+
+    .studentMarks th,
+    .studentMarks td {
+        padding: 9px 2px;
+        white-space: nowrap;
+    }
+
+    .studentStatus {
+        margin-top: 12px;
+        font-size: 0.8em;
+    }
+
+    .marksSummary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 14px;
+    }
+
+    .marksSummary div {
+        min-width: 0;
+        padding: 10px 4px;
+        font-size: 0.8em;
+        overflow-wrap: anywhere;
+    }
+
+    .studentButtons {
+        justify-content: flex-end;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .statsParent {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 0 12px 16px;
+    }
+
+    .statsParent .stat-cards {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        flex: none;
+        padding: 12px;
+    }
+
+    .topper-title-parent {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .topper-title-parent h3 {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .toppper-name-parent {
+        height: auto;
+        min-height: 110px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .toppper-name-parent > p {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        font-size: 1.4em;
+    }
+
+    .name-average-parent {
+        min-width: 0;
+    }
+
+    .name-average-parent > p {
+        overflow-wrap: anywhere;
+    }
+
+    .topper-average {
+        padding: 9px;
+    }
+
+    .above-average-table-scroll,
+    .alphabetical-table-scroll {
+        max-height: 280px;
+        overflow: auto;
+    }
+
+    .statsParent .stats-table {
+        width: 100%;
+        font-size: 0.82em;
+    }
+
+    .statsParent .stats-table th,
+    .statsParent .stats-table td {
+        padding: 9px 6px;
+        white-space: nowrap;
+    }
+
+    .emptyStudentsMessage {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    .studentFormParent {
+        width: 500px;
+        max-width: 100%;
+        max-height: 90vh;
+        padding: 16px;
+    }
+
+    .marks-inputs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
