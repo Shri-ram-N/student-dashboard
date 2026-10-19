@@ -1,21 +1,22 @@
 # Student Performance Dashboard
 
-A simple and responsive web application to manage student records, track subject marks, analyze academic performance, and identify class toppers.
+A responsive web application for managing student records, tracking academic performance, and analyzing student marks through a simple dashboard.
+
+**GitHub Repository:** [Shri-ram-N/student-dashboard](https://github.com/Shri-ram-N/student-dashboard)
 
 ## Features
 
-- **Dashboard Overview** — View total students, class average, passed students, and failed students.
+- **Dashboard Overview** — View key statistics about students and their academic performance.
 - **Student Management** — Add, edit, and delete student records.
-- **Subject Marks** — Record marks for five subjects, with validation between 0 and 100.
-- **Performance Analysis** — Calculate student averages, total marks, highest marks, and lowest marks.
-- **Grade Calculation** — Automatically assign grades based on student performance.
-- **Pass/Fail Status** — Identify whether a student has passed or failed based on subject marks.
-- **Search and Filters** — Search students by name and filter by average, passed status, or failed status.
-- **Class Topper** — Display the student with the highest average.
-- **Class Average Analysis** — Identify students whose averages are above the class average.
-- **Alphabetical Student List** — View student records in alphabetical order.
-- **Responsive Design** — Adapt the dashboard layout for desktop, tablet, and mobile screens.
-- **Local Storage** — Save student records in the browser so they persist across page reloads.
+- **Subject Marks** — Record marks for five subjects with validation between 0 and 100.
+- **Performance Analysis** — Calculate total marks, average marks, grades, and pass/fail status.
+- **Search Students** — Find students using the available search functionality.
+- **Filter Students** — Filter student records based on available criteria.
+- **Class Statistics** — View the class average and identify top-performing students.
+- **Sorting** — Sort students alphabetically and by performance where supported.
+- **Above Class Average** — Identify students performing above the class average.
+- **Local Storage** — Preserve student records in the browser using `localStorage`.
+- **Responsive Design** — Access the dashboard on desktop, tablet, and mobile devices.
 
 ## Technologies Used
 
@@ -24,63 +25,90 @@ A simple and responsive web application to manage student records, track subject
 - JavaScript
 - Browser Local Storage
 
-## Grading System
-
-| Average Marks | Grade |
-|---|---|
-| 90–100 | A |
-| 80–89.99 | B |
-| 70–79.99 | C |
-| 60–69.99 | D |
-| Below 60 | F |
-
-**Note:** A student receives grade F if any subject mark is below 35, regardless of their overall average.
-
-## Pass/Fail Criteria
-
-- **Passed:** Every subject mark is at least 35.
-- **Failed:** At least one subject mark is below 35.
-
-## Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone <your-repository-url>
-```
-
-### 2. Navigate to the Project Folder
-
-```bash
-cd <project-folder>
-```
-
-### 3. Run the Application
-
-Open `index.html` in your browser, or use the **Live Server** extension in Visual Studio Code.
-
-No additional dependencies or installation steps are required.
-
 ## Project Structure
 
 ```text
-student-performance-dashboard/
+student-dashboard/
 ├── index.html
 ├── studentDashboard.css
 ├── studentDashboard.js
 └── README.md
 ```
 
+## Getting Started
+
+### Prerequisites
+
+You need a modern web browser and a code editor such as Visual Studio Code.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Shri-ram-N/student-dashboard.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd student-dashboard
+   ```
+
+3. Open `index.html` in your browser.
+
+   Alternatively, use the **Live Server** extension in Visual Studio Code to run the project locally.
+
+## Grading System
+
+The dashboard calculates grades based on student performance.
+
+| Average Marks | Grade |
+|---|---|
+| 90 and above | A |
+| 80–89 | B |
+| 70–79 | C |
+| 60–69 | D |
+| Below 60 | F |
+
+**Pass/Fail Rule:** A student must score at least 35 marks in every subject to pass. If the student scores below 35 in any subject, the result is Fail, regardless of the average.
+
 ## Data Storage
 
-Student records are stored using browser Local Storage. The data remains available after refreshing the page in the same browser, but it is not synchronized across devices or browsers.
+Student records are stored in the browser's `localStorage`.
 
-Clearing the browser's site data may remove the saved records.
+- Data remains available when the page is refreshed in the same browser.
+- Data is stored locally on the current browser and device.
+- Clearing browser storage or site data may remove saved records.
+- The application does not use a backend database.
+
+## Responsive Design
+
+The dashboard adapts to different screen sizes:
+
+- **Desktop:** Dashboard statistics and student records are displayed in a wider layout.
+- **Tablet:** Cards and dashboard sections adjust to the available space.
+- **Mobile:** Student cards and statistics stack into a compact layout for easier viewing.
 
 ## Future Improvements
 
-- Subject-wise performance charts
-- Export student reports to CSV or PDF
-- Sort students by marks or average
-- Add authentication and user accounts
-- Store student records in a database
+- Add student data export and import.
+- Add charts for visual performance analysis.
+- Introduce additional filtering and sorting options.
+- Add backend integration and database storage.
+- Implement user authentication.
+- Generate downloadable student performance reports.
+
+## Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch to your fork.
+5. Open a pull request.
+
+---
+
+**Repository:** [https://github.com/Shri-ram-N/student-dashboard](https://github.com/Shri-ram-N/student-dashboard)
