@@ -1,8 +1,10 @@
 # Student Performance Dashboard
 
-A responsive web application for managing student records, tracking academic performance, and analyzing student marks through a simple dashboard.
+A responsive web application to manage student records, track academic performance, and analyze student marks through a simple dashboard.
 
-**GitHub Repository:** [Shri-ram-N/student-dashboard](https://github.com/Shri-ram-N/student-dashboard)
+**Live Demo:** [View Student Performance Dashboard](https://shri-ram-n.github.io/student-dashboard/)
+
+**Source Code:** [GitHub Repository](https://github.com/Shri-ram-N/student-dashboard)
 
 ## Features
 
@@ -10,12 +12,12 @@ A responsive web application for managing student records, tracking academic per
 - **Student Management** — Add, edit, and delete student records.
 - **Subject Marks** — Record marks for five subjects with validation between 0 and 100.
 - **Performance Analysis** — Calculate total marks, average marks, grades, and pass/fail status.
-- **Search Students** — Find students using the available search functionality.
+- **Search Students** — Find students using the search functionality.
 - **Filter Students** — Filter student records based on available criteria.
-- **Class Statistics** — View the class average and identify top-performing students.
+- **Class Statistics** — View class averages and identify top-performing students.
 - **Sorting** — Sort students alphabetically and by performance where supported.
 - **Above Class Average** — Identify students performing above the class average.
-- **Local Storage** — Preserve student records in the browser using `localStorage`.
+- **Local Storage** — Save student records in the browser using `localStorage`.
 - **Responsive Design** — Access the dashboard on desktop, tablet, and mobile devices.
 
 ## Technologies Used
@@ -39,7 +41,8 @@ student-dashboard/
 
 ### Prerequisites
 
-You need a modern web browser and a code editor such as Visual Studio Code.
+- A modern web browser
+- A code editor such as Visual Studio Code (optional)
 
 ### Installation
 
@@ -57,11 +60,11 @@ You need a modern web browser and a code editor such as Visual Studio Code.
 
 3. Open `index.html` in your browser.
 
-   Alternatively, use the **Live Server** extension in Visual Studio Code to run the project locally.
+   Alternatively, use the Live Server extension in Visual Studio Code to run the application locally.
 
 ## Grading System
 
-The dashboard calculates grades based on student performance.
+The dashboard uses the following grading system based on average marks.
 
 | Average Marks | Grade |
 |---|---|
@@ -71,44 +74,51 @@ The dashboard calculates grades based on student performance.
 | 60–69 | D |
 | Below 60 | F |
 
-**Pass/Fail Rule:** A student must score at least 35 marks in every subject to pass. If the student scores below 35 in any subject, the result is Fail, regardless of the average.
+### Pass/Fail Criteria
+
+A student must score at least 35 marks in every subject to pass.
+
+If a student scores below 35 in any subject, the result is **Fail**, regardless of the overall average.
 
 ## Data Storage
 
 Student records are stored in the browser's `localStorage`.
 
-- Data remains available when the page is refreshed in the same browser.
+- Records remain available after refreshing the page in the same browser.
 - Data is stored locally on the current browser and device.
 - Clearing browser storage or site data may remove saved records.
-- The application does not use a backend database.
+- The application does not require a backend database.
 
 ## Responsive Design
 
-The dashboard adapts to different screen sizes:
+The dashboard adapts to different screen sizes.
 
-- **Desktop:** Dashboard statistics and student records are displayed in a wider layout.
-- **Tablet:** Cards and dashboard sections adjust to the available space.
-- **Mobile:** Student cards and statistics stack into a compact layout for easier viewing.
+- **Desktop:** Displays dashboard statistics and student records in a wider layout.
+- **Tablet:** Adjusts cards and dashboard sections to the available space.
+- **Mobile:** Uses a compact layout for easier navigation and viewing.
 
 ## Future Improvements
 
-- Add student data export and import.
-- Add charts for visual performance analysis.
-- Introduce additional filtering and sorting options.
-- Add backend integration and database storage.
+- Add student data import and export.
+- Introduce charts for visual performance analysis.
+- Add more filtering and sorting options.
+- Integrate a backend and database.
 - Implement user authentication.
 - Generate downloadable student performance reports.
 
 ## Contributing
 
-Contributions and suggestions are welcome.
+Suggestions and contributions are welcome.
 
 1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push the branch to your fork.
+2. Create a new feature branch.
+3. Make your changes.
+4. Commit and push your changes.
 5. Open a pull request.
 
 ---
 
-**Repository:** [https://github.com/Shri-ram-N/student-dashboard](https://github.com/Shri-ram-N/student-dashboard)
+### Links
+
+- **Live Website:** https://shri-ram-n.github.io/student-dashboard/
+- **GitHub Repository:** https://github.com/Shri-ram-N/student-dashboard
